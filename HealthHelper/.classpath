@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="lib" path="E:/Android1/sdk/extras/android/support/v7/android-support-v7-appcompat.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/Programmer/workspace/app2017/avoscloud-android-sdk-v3.16.2/avoscloud-push-v3.16.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/Programmer/workspace/app2017/avoscloud-android-sdk-v3.16.2/avoscloud-sdk-v3.16.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/Programmer/workspace/app2017/avoscloud-android-sdk-v3.16.2/avoscloud-search-v3.16.2.zip"/>
+	<classpathentry exported="true" kind="lib" path="E:/Programmer/workspace/app2017/avoscloud-android-sdk-v3.16.2/avoscloud-sns-v3.16.2.zip"/>
+	<classpathentry exported="true" kind="lib" path="E:/Programmer/workspace/app2017/avoscloud-android-sdk-v3.16.2/avoscloud-statistics-v3.16.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/Programmer/workspace/app2017/avoscloud-android-sdk-v3.16.2/fastjson.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/Programmer/workspace/app2017/avoscloud-android-sdk-v3.16.2/Java-WebSocket-1.3.2-leancloud.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/Programmer/workspace/app2017/avoscloud-android-sdk-v3.16.2/okhttp-2.6.0-leancloud.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/Programmer/workspace/app2017/avoscloud-android-sdk-v3.16.2/okio-1.6.0-leancloud.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/Programmer/workspace/app2017/avoscloud-android-sdk-v3.16.2/protobuf-java-2.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/Programmer/workspace/app2017/avoscloud-android-sdk-v3.16.2/qq.sdk.1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/Programmer/workspace/app2017/avoscloud-android-sdk-v3.16.2/weibo.sdk.android.sso.3.0.1-leancloud.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>
