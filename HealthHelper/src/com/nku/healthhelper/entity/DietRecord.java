@@ -41,7 +41,7 @@ public class DietRecord extends AVObject {
 		return getString("kind");
 	}
 	
-//	about weight
+/*//	about weight
 	public void setWeight(int weight){
 		put("weight", weight);
 	}
@@ -66,6 +66,27 @@ public class DietRecord extends AVObject {
 	}
 	public void removeFoodList(Food food){
 		List<Food> list = new ArrayList<Food>();
+		list.add(food);
+		removeAll("foodList", list);
+	}*/
+	
+//	about food detail
+	public void setFoodList(List<DietRecordDetail> listFood){
+		if(null == listFood) return;
+		addAll("foodList", listFood);
+	}
+	@SuppressWarnings("unchecked")
+	public List<DietRecordDetail> getFoodList(){
+		return getList("foodList");
+	}
+	public int getFoodListCount(){
+		return getFoodList().size();
+	}
+	public void addFoodList(DietRecordDetail food){
+		addUnique("foodList", food);
+	}
+	public void removeFoodList(DietRecordDetail food){
+		List<DietRecordDetail> list = new ArrayList<DietRecordDetail>();
 		list.add(food);
 		removeAll("foodList", list);
 	}

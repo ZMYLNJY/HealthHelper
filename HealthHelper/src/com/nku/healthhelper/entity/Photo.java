@@ -30,10 +30,10 @@ public class Photo extends AVObject {
 	
 	//set and get photoname
 	public String getPhotoname(){
-		return getString("photoname");
+		return getString("photoName");
 	}
-	public void setPhotoname(String photoname){
-		put("photoname", photoname);
+	public void setPhotoname(String photoName){
+		put("photoName", photoName);
 	}
 	
 	//set and get description

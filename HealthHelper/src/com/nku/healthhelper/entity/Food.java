@@ -11,6 +11,11 @@ public class Food extends AVObject {
 
 	public Food() {
 		// TODO Auto-generated constructor stub
+		super();
+	}
+	public Food(String theClassName) {
+		super(theClassName);
+		// TODO Auto-generated constructor stub
 	}
 
 //	about foodname
@@ -50,10 +55,15 @@ public class Food extends AVObject {
 		return getString("photoName");
 	}*/
 	public AVFile getPhotoFile(){
-		return getAVFile("photoFile");
+		return getAVFile("photoFile"); 
 	}
 	
 //	about 营养成分
+	public String getNurition(){
+		return this.getString("nutrition");
+	}
+	
+/*//	about 营养成分
 	public HashMap<String, Double> getNutrition(){
 		HashMap<String, Double> hashMap = new HashMap<String, Double>();
 		hashMap.put("fat", getDouble("fat"));
@@ -66,7 +76,7 @@ public class Food extends AVObject {
 		hashMap.put("Zn", getDouble("Zn"));
 		hashMap.put("Na", getDouble("Na"));
 		return hashMap;
-	}
+	}*/
 }
 /*Food：食物	
 Foodname	食物名称

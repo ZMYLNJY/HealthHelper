@@ -22,6 +22,7 @@ public class UploadFood extends AVObject {
 */
 	public UploadFood() {
 		// TODO Auto-generated constructor stub
+		super();
 	}
 
 //	about user
