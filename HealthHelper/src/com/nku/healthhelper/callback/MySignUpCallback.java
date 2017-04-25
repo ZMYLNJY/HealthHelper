@@ -3,28 +3,29 @@ package com.nku.healthhelper.callback;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.SignUpCallback;
 
-import android.content.Context;
+import android.app.Activity;
 import android.widget.Toast;
 
 public class MySignUpCallback extends SignUpCallback {
 
-	private Context context;
+	private Activity activity;
 	
-	public MySignUpCallback(Context context) {
+	public MySignUpCallback(Activity activity) {
 		// TODO Auto-generated constructor stub
-		this.context = context;
+		super();
+		this.activity = activity;
 	}
 
 	@Override
-	public void done(AVException arg0) {
+	public void done(AVException e) {
 		// TODO Auto-generated method stub
-		if(arg0 == null){
-			Toast.makeText(context, "注册成功！", Toast.LENGTH_LONG).show();
+		if(e == null){
+			Toast.makeText(activity.getApplicationContext(), "注册成功！", Toast.LENGTH_LONG).show();
 		}
-		else if(arg0.getCode() == AVException.USERNAME_TAKEN){
-			Toast.makeText(context, "用户名已被使用！", Toast.LENGTH_LONG).show();
+		else if(e.getCode() == AVException.USERNAME_TAKEN){
+			Toast.makeText(activity.getApplicationContext(), "用户名已被使用！", Toast.LENGTH_LONG).show();
 		}else {
-			Toast.makeText(context, arg0.getMessage(), Toast.LENGTH_LONG).show();
+			Toast.makeText(activity.getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
 		}
 	}
 

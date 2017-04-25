@@ -22,6 +22,7 @@ public class Users extends AVUser {
 	
 	public Users() {
 		// TODO Auto-generated constructor stub
+		super();
 	}
 
 	public Users(Parcel in) {

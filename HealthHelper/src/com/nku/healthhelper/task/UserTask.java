@@ -3,14 +3,14 @@ package com.nku.healthhelper.task;
 import com.nku.healthhelper.callback.MySignUpCallback;
 import com.nku.healthhelper.entity.Users;
 
-import android.content.Context;
+import android.app.Activity;
 
 public class UserTask {
 
-	private Context context;
+	private Activity activity;
 	
-	public UserTask(Context context){
-		this.context = context;
+	public UserTask(Activity activity){
+		this.activity = activity;
 	}
 	
 /**
@@ -24,7 +24,7 @@ public class UserTask {
 		Users users = new Users();
 		users.setUsername(username);
 		users.setPassword(password);
-		users.signUpInBackground(new MySignUpCallback(context));
+		users.signUpInBackground(new MySignUpCallback(activity));
 	}
 
 }
