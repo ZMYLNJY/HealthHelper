@@ -38,8 +38,12 @@ public class MainActivity extends Activity {
 				new UserTask(MainActivity.this).register(username, password);*/
 				
 //				查询食物Food小例子
-				String foodName = edtUsername.getText().toString();
-				new FoodTask(MainActivity.this).getFoodByName(foodName);
+				/*String foodName = edtUsername.getText().toString();
+				new FoodTask(MainActivity.this).getFoodByName(foodName);*/
+				
+//				查询食物Food,根据类别
+				/*String type = edtUsername.getText().toString();
+				new FoodTask(MainActivity.this).getFoodByType(type);*/
 			}
 		});
 		
