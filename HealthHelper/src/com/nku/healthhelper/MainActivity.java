@@ -13,6 +13,8 @@ import android.widget.EditText;
 
 public class MainActivity extends Activity {
 
+	public String aaaa;
+	
 	private EditText edtUsername;
 	private EditText edtPassword;
 	private EditText edtResult;

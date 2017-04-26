@@ -81,6 +81,21 @@ public class Food extends AVObject {
 		return getAVFile("photoFile"); 
 	}
 	
+	/**
+	 * 获得该食物的推荐指数。以double形式存储，后续自行处理。
+	 * @return 食物的推荐指数
+	 */
+	public double getRating(){
+		return this.getDouble("rating");
+	}
+	
+	/**
+	 * 设置食物的推荐指数，应该在某个用户打分或更改打分后自动调用，重新计算。
+	 * @param recommend 新计算出的推荐指数
+	 */
+	public void setRating(double rating){
+		put("rating", rating);
+	}
 //	about 营养成分
 /*	*//**
 	 * 获取食物的营养成分列表

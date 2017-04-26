@@ -20,6 +20,7 @@ public class MyLeanCloudApp extends Application {
         AVObject.registerSubclass(DietRecord.class);
         AVObject.registerSubclass(Photo.class);
         AVObject.registerSubclass(UploadFood.class);
+        AVObject.registerSubclass(FoodRating.class);
 
         // 初始化参数依次为 this, AppId, AppKey
         AVOSCloud.initialize(this,"e4vidVv6CrhVYOqJCjQfmXLE-gzGzoHsz","9f9e92teQRjg4sxpx6OjvPRp");
