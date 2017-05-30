@@ -48,8 +48,8 @@ public class FoodCompareActivity extends Activity implements OnClickListener{
 		
 		Intent intent = getIntent();
 		food = intent.getBundleExtra("food").getParcelable("food");
-		
 		ImageUtil.SetImage(imgFood1, food.getPhotoFile());
+		
 		txtCalorie1.setText(food.getCalorie()+"");
 		txtFat1.setText(food.getNutrition().get("Fat")+"");
 		txtProtein1.setText(food.getNutrition().get("Protein")+"");

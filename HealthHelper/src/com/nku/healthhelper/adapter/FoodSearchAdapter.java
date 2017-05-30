@@ -3,14 +3,11 @@ package com.nku.healthhelper.adapter;
 import java.util.List;
 import java.util.Map;
 
-import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
-import com.avos.avoscloud.GetDataCallback;
 import com.nku.healthhelper.R;
-import com.nku.healthhelper.adapter.FoodInfoAdapter.FoodItemView;
 import com.nku.healthhelper.entity.Food;
 import com.nku.healthhelper.util.ImageUtil;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,7 +20,6 @@ import android.widget.TextView;
 
 public class FoodSearchAdapter extends BaseAdapter {
 	
-	private Context context;
 	private List<Map<String, Object>> foodItems;
 	private LayoutInflater foodItemInflater;
 	private FoodItemView foodItemView;
@@ -35,7 +31,6 @@ public class FoodSearchAdapter extends BaseAdapter {
 		
 	}
 	public FoodSearchAdapter(Context context,List<Map<String, Object>>foodItems){
-		this.context = context;
 		foodItemInflater = LayoutInflater.from(context);
 		this.foodItems = foodItems;
 	}
@@ -62,6 +57,7 @@ public class FoodSearchAdapter extends BaseAdapter {
 		return arg0;
 	}
 
+	@SuppressLint("InflateParams")
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		Log.e("method", "getView");
@@ -80,16 +76,7 @@ public class FoodSearchAdapter extends BaseAdapter {
 		Food food = (Food) foodItems.get(position).get("food");
 		AVFile file = (AVFile) food.getPhotoFile();
 		//后台进行下载图片文件
-		file.getDataInBackground(new GetDataCallback() {
-			
-			@Override
-			public void done(byte[] bytes, AVException e) {
-			//下载完成后获得了图片的byte[]格式
-				// TODO Auto-generated method stub
-				//在setImageBitmap方法中调用ImageUtil.Byte2Bitmap()方法将byte[]格式转换成Bitmap格式。
-				setImage(foodItemView.imgFoodItem, bytes);
-			}
-		});
+		ImageUtil.SetImage(foodItemView.imgFoodItem, file);
 		
 		foodItemView.txtFoodName.setText(food.getFoodName());
 		foodItemView.txtFoodHit.setText(food.getCalorie() + "");

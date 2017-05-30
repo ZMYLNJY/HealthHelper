@@ -8,7 +8,6 @@ import java.util.Map;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.FindCallback;
 import com.nku.healthhelper.R;
-import com.nku.healthhelper.adapter.FoodInfoAdapter;
 import com.nku.healthhelper.adapter.FoodSearchAdapter;
 import com.nku.healthhelper.entity.Food;
 
