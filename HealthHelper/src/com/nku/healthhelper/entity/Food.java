@@ -3,14 +3,20 @@ package com.nku.healthhelper.entity;
 
 import java.util.HashMap;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.avos.avoscloud.AVClassName;
 import com.avos.avoscloud.AVFile;
 import com.avos.avoscloud.AVObject;
 import com.nku.healthhelper.util.StringUtil;
 
 @AVClassName("Food")
-public class Food extends AVObject {
+public class Food extends AVObject implements Parcelable{
 	
+	/**
+	 * 
+	 */
 	public Food() {
 		// TODO Auto-generated constructor stub
 		super();
@@ -18,6 +24,9 @@ public class Food extends AVObject {
 	public Food(String theClassName) {
 		super(theClassName);
 		// TODO Auto-generated constructor stub
+	}
+	public Food(Parcel parcel){
+		super(parcel);
 	}
 
 //	about foodname

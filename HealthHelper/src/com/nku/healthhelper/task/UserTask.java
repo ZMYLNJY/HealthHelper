@@ -1,30 +1,40 @@
 package com.nku.healthhelper.task;
 
-import com.nku.healthhelper.callback.MySignUpCallback;
+import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.SignUpCallback;
 import com.nku.healthhelper.entity.Users;
 
-import android.app.Activity;
+import android.content.Context;
+import android.widget.Toast;
 
 public class UserTask {
 
-	private Activity activity;
+	private Context context;
 	
-	public UserTask(Activity activity){
-		this.activity = activity;
+	public UserTask(Context context){
+		this.context = context;
 	}
 	
-/**
- * 根据用户名和密码进行注册，不过目测不需要该方法了
- * 会调用MySignUpCallback方法进行结果的处理	
- * @param username 用户名，不能重复
- * @param password 密码，无限制
- */
 //	register with username and password
 	public void register(String username, String password){
 		Users users = new Users();
 		users.setUsername(username);
 		users.setPassword(password);
-		users.signUpInBackground(new MySignUpCallback(activity));
+		users.signUpInBackground(new SignUpCallback() {
+			@Override
+			public void done(AVException arg0) {
+				// TODO Auto-generated method stub
+				if(arg0 == null){
+					Toast.makeText(context, "注册成功！", Toast.LENGTH_LONG).show();
+				}
+				else if(arg0.getCode() == AVException.USERNAME_TAKEN){
+					Toast.makeText(context, "用户名已被使用！", Toast.LENGTH_LONG).show();
+				}else {
+					Toast.makeText(context, arg0.getMessage(), Toast.LENGTH_LONG).show();
+				}
+				
+			}
+		});
 	}
 
 }

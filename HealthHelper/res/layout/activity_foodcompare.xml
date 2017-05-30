@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#00BCD4">
+
+        <TextView
+            android:text="食物对比"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#ffffff"         
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/imgReturnFoodinfo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/all_return" />
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="match_parent"
+	    android:layout_height="100dp"
+	    android:orientation="horizontal"
+	    android:layout_marginTop="5dp">
+	    <ImageView android:layout_width="80dp"
+	        android:layout_height="80dp"
+	        android:id="@+id/imgFood1"
+	        android:src="@drawable/ic_launcher"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="30dp"/>
+	    <TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="VS"
+	        android:textSize="20sp"
+	        android:layout_gravity="center"
+	        android:layout_marginLeft="20dp"
+	        android:layout_centerInParent="true"/>
+	    <ImageView android:layout_width="80dp"
+	        android:layout_height="80dp"
+	        android:id="@+id/imgFood2"
+	        android:layout_marginLeft="20dp"
+	        android:src="@drawable/ic_launcher"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="30dp"/>
+	</RelativeLayout>
+	<TextView android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="营养元素"
+	        android:textSize="25sp"
+	        android:layout_gravity="center"
+	        android:layout_marginTop="5dp"/>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:layout_marginTop="10dp">
+	     <RelativeLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="center"
+	        android:layout_marginTop="10dp">
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="--"
+	            android:textSize="20sp"
+	            android:id="@+id/txtFood1calorie"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="40dp"/>
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="卡路里"
+	            android:textSize="20sp"
+	            android:layout_centerInParent="true"/>
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="--"
+	            android:textSize="20sp"
+	            android:id="@+id/txtFood2calorie"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="40dp"/>
+	        
+	    </RelativeLayout>
+	    <RelativeLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="center"
+	        android:layout_marginTop="10dp">
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="--"
+	            android:textSize="20sp"
+	            android:id="@+id/txtFood1fat"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="40dp"/>
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="脂肪"
+	            android:textSize="20sp"
+	            android:layout_centerInParent="true"/>
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="--"
+	            android:textSize="20sp"
+	            android:id="@+id/txtFood2fat"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="40dp"/>
+	        
+	    </RelativeLayout>
+	    <RelativeLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="center"
+	        android:layout_marginTop="10dp">
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="--"
+	            android:textSize="20sp"
+	            android:id="@+id/txtFood1protein"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="40dp"/>
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="蛋白质"
+	            android:textSize="20sp"
+	            android:layout_centerInParent="true"/>
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="--"
+	            android:textSize="20sp"
+	            android:id="@+id/txtFood2protein"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="40dp"/>
+	        
+	    </RelativeLayout>
+	     <RelativeLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="center"
+	        android:layout_marginTop="10dp">
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="--"
+	            android:textSize="20sp"
+	            android:id="@+id/txtFood1sugar"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="40dp"/>
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="碳水化合物"
+	            android:textSize="20sp"
+	            android:layout_centerInParent="true"/>
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="--"
+	            android:textSize="20sp"
+	            android:id="@+id/txtFood2sugar"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="40dp"/>
+	        
+	    </RelativeLayout>
+	    <RelativeLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="center"
+	        android:layout_marginTop="10dp">
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="--"
+	            android:textSize="20sp"
+	            android:id="@+id/txtFood1calcium"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="40dp"/>
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="钙"
+	            android:textSize="20sp"
+	            android:layout_centerInParent="true"/>
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="--"
+	            android:textSize="20sp"
+	            android:id="@+id/txtFood2calcium"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="40dp"/>
+	        
+	    </RelativeLayout>
+	    <RelativeLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="center"
+	        android:layout_marginTop="10dp">
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="--"
+	            android:textSize="20sp"
+	            android:id="@+id/txtFood1zn"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="40dp"/>
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="锌"
+	            android:textSize="20sp"
+	            android:layout_centerInParent="true"/>
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="--"
+	            android:textSize="20sp"
+	            android:id="@+id/txtFood2zn"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="40dp"/>
+	        
+	    </RelativeLayout>
+	    <RelativeLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="center"
+	        android:layout_marginTop="10dp">
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="--"
+	            android:textSize="20sp"
+	            android:id="@+id/txtFood1K"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="40dp"/>
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="钾"
+	            android:textSize="20sp"
+	            android:layout_centerInParent="true"/>
+	        <TextView android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:text="--"
+	            android:textSize="20sp"
+	            android:id="@+id/txtFood2K"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="40dp"/>
+	        
+	    </RelativeLayout>
+	</LinearLayout>
+	
+
+</LinearLayout>

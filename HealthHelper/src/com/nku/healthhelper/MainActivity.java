@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
 		
 		edtUsername = (EditText)findViewById(R.id.edt_Main_Username);
 		edtPassword = (EditText)findViewById(R.id.edt_Main_Password);
-		edtResult = (EditText)findViewById(R.id.edt_Main_Result);
+//		edtResult = (EditText)findViewById(R.id.edt_Main_Result);
 		btnSubmit = (Button)findViewById(R.id.btn_Main_Submit);
 		
 		btnSubmit.setOnClickListener(new OnClickListener() {
