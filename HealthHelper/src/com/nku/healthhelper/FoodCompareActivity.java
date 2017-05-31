@@ -1,6 +1,8 @@
 package com.nku.healthhelper;
 
+import com.avos.avoscloud.AVFile;
 import com.nku.healthhelper.entity.Food;
+import com.nku.healthhelper.task.SetImageTask;
 import com.nku.healthhelper.util.ImageUtil;
 
 import android.app.Activity;
@@ -48,14 +50,24 @@ public class FoodCompareActivity extends Activity implements OnClickListener{
 		
 		Intent intent = getIntent();
 		food = intent.getBundleExtra("food").getParcelable("food");
-		ImageUtil.SetImage(imgFood1, food.getPhotoFile());
-		
+//		ImageUtil.SetImage(imgFood1, food.getPhotoFile());
+		AVFile file = food.getPhotoFile();
+//		file.getDataInBackground(new SetImageTask(imgFood1, imgFood2));
 		txtCalorie1.setText(food.getCalorie()+"");
 		txtFat1.setText(food.getNutrition().get("Fat")+"");
 		txtProtein1.setText(food.getNutrition().get("Protein")+"");
 		txtSugar1.setText(food.getNutrition().get("Carbonhydro")+"");
 		txtCa1.setText(food.getNutrition().get("Zn")+"");
 		txtZn1.setText(food.getNutrition().get("K")+"");
+		
+		ImageUtil.SetImage(file, imgFood1, imgFood2);
+		
+		txtCalorie2.setText(food.getCalorie()+"");
+		txtFat2.setText(food.getNutrition().get("Fat")+"");
+		txtProtein2.setText(food.getNutrition().get("Protein")+"");
+		txtSugar2.setText(food.getNutrition().get("Carbonhydro")+"");
+		txtCa2.setText(food.getNutrition().get("Zn")+"");
+		txtZn2.setText(food.getNutrition().get("K")+"");
 		
 	}
 
@@ -64,22 +76,41 @@ public class FoodCompareActivity extends Activity implements OnClickListener{
 		// TODO Auto-generated method stub
 		switch (view.getId()) {
 		case R.id.imgReturnFoodinfo:
-			Intent returnInfoIntent = new Intent(FoodCompareActivity.this,FoodDetailsActivity.class);
-			Bundle bundle = new Bundle();
-			bundle.putParcelable("food", food);
-			returnInfoIntent.putExtra("food", bundle);
-			startActivity(returnInfoIntent);
+//			Intent returnInfoIntent = new Intent(FoodCompareActivity.this,FoodDetailsActivity.class);
+//			Bundle bundle = new Bundle();
+//			bundle.putParcelable("food", food);
+//			returnInfoIntent.putExtra("food", bundle);
+//			startActivity(returnInfoIntent);
+			finish();
 			break;
 		case R.id.imgFood1:
 			break;
 		case R.id.imgFood2:
 			//搜索界面
 			Intent addCompareIntent = new Intent(FoodCompareActivity.this,FoodSearchActivity.class);
-			startActivity(addCompareIntent);
-			finish();
+			startActivityForResult(addCompareIntent, 1);
+//			startActivity(addCompareIntent);
+//			finish();
 			break;
 		default:
 			break;
+		}
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if(requestCode == 1 && resultCode == 101){
+			Food food = data.getBundleExtra("food").getParcelable("food");
+			ImageUtil.SetImage(food.getPhotoFile(), imgFood2);
+			
+			txtCalorie2.setText(food.getCalorie()+"");
+			txtFat2.setText(food.getNutrition().get("Fat")+"");
+			txtProtein2.setText(food.getNutrition().get("Protein")+"");
+			txtSugar2.setText(food.getNutrition().get("Carbonhydro")+"");
+			txtCa2.setText(food.getNutrition().get("Zn")+"");
+			txtZn2.setText(food.getNutrition().get("K")+"");
 		}
 	}
 }

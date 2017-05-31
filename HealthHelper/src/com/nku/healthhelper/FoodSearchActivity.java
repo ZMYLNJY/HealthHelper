@@ -50,48 +50,66 @@ public class FoodSearchActivity extends Activity implements OnClickListener{
 		Intent searchIntent = new Intent(FoodSearchActivity.this,FoodSearchResultActivity.class);		
 		switch (view.getId()) {	
 		case R.id.imgFoodSearch:
-			if(edtSearchFoodname.getText().toString()!=null){
+			if(edtSearchFoodname.getText()!=null && !"".equals(edtSearchFoodname.getText().toString())){
 				foodnameString = edtSearchFoodname.getText().toString();
 				searchIntent.putExtra("searchfood", foodnameString);
-				startActivity(searchIntent);
+				startActivityForResult(searchIntent, 2);
+//				startActivity(searchIntent);
 			}else {
 				Toast.makeText(getApplicationContext(), "请输入食物名称", Toast.LENGTH_SHORT).show();
 			}
 			break;
 		case R.id.imgReturnFoodSearch:
+			finish();
 			break;
 		case R.id.txtTag1:
 			foodnameString = txtTag1.getText().toString();
 			searchIntent.putExtra("searchfood", foodnameString);
-			startActivity(searchIntent);
+			startActivityForResult(searchIntent, 2);
+//			startActivity(searchIntent);
 			break;
 		case R.id.txtTag2:
 			foodnameString = txtTag2.getText().toString();
 			searchIntent.putExtra("searchfood", foodnameString);
-			startActivity(searchIntent);
+			startActivityForResult(searchIntent, 2);
+//			startActivity(searchIntent);
 			break;
 		case R.id.txtTag3:
 			foodnameString = txtTag3.getText().toString();
 			searchIntent.putExtra("searchfood", foodnameString);
-			startActivity(searchIntent);
+			startActivityForResult(searchIntent, 2);
+//			startActivity(searchIntent);
 			break;
 		case R.id.txtTag4:
 			foodnameString = txtTag4.getText().toString();
 			searchIntent.putExtra("searchfood", foodnameString);
-			startActivity(searchIntent);
+			startActivityForResult(searchIntent, 2);
+//			startActivity(searchIntent);
 			break;
 		case R.id.txtTag5:
 			foodnameString = txtTag5.getText().toString();
 			searchIntent.putExtra("searchfood", foodnameString);
-			startActivity(searchIntent);
+			startActivityForResult(searchIntent, 2);
+//			startActivity(searchIntent);
 			break;
 		case R.id.txtTag6:
 			foodnameString = txtTag6.getText().toString();
 			searchIntent.putExtra("searchfood", foodnameString);
-			startActivity(searchIntent);
+			startActivityForResult(searchIntent, 2);
+//			startActivity(searchIntent);
 			break;
 		default:
 			break;
+		}
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if(requestCode == 2 && resultCode == 201){
+			setResult(101, data);
+			finish();
 		}
 	}
 	

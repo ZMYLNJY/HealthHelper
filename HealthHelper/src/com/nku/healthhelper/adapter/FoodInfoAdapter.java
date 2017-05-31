@@ -55,7 +55,7 @@ public class FoodInfoAdapter extends BaseAdapter {
 		AVFile file = (AVFile) food.getPhotoFile();
 		//后台进行下载图片文件
 //		file.getDataInBackground(new SetImageTask(foodItemView.imgFoodItem));
-		ImageUtil.SetImage(foodItemView.imgFoodItem, file);
+		ImageUtil.SetImage(file, foodItemView.imgFoodItem);
 		foodItemView.txtFoodName.setText(food.getFoodName());
 		foodItemView.txtFoodHit.setText(food.getCalorie() + "");
         

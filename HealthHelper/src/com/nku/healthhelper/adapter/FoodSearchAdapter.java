@@ -12,6 +12,7 @@ import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -23,6 +24,7 @@ public class FoodSearchAdapter extends BaseAdapter {
 	private List<Map<String, Object>> foodItems;
 	private LayoutInflater foodItemInflater;
 	private FoodItemView foodItemView;
+	private MyOnclickListener listener;
 	public final class FoodItemView{
 		public ImageView imgFoodItem;
 		public TextView txtFoodHit;
@@ -30,9 +32,10 @@ public class FoodSearchAdapter extends BaseAdapter {
 		public Button btnAddCompare;
 		
 	}
-	public FoodSearchAdapter(Context context,List<Map<String, Object>>foodItems){
+	public FoodSearchAdapter(Context context,List<Map<String, Object>>foodItems, MyOnclickListener listener){
 		foodItemInflater = LayoutInflater.from(context);
 		this.foodItems = foodItems;
+		this.listener = listener;
 	}
 	
 	public void setImage(ImageView imageView, byte[] bytes){
@@ -76,16 +79,30 @@ public class FoodSearchAdapter extends BaseAdapter {
 		Food food = (Food) foodItems.get(position).get("food");
 		AVFile file = (AVFile) food.getPhotoFile();
 		//后台进行下载图片文件
-		ImageUtil.SetImage(foodItemView.imgFoodItem, file);
+		ImageUtil.SetImage(file, foodItemView.imgFoodItem);
 		
 		foodItemView.txtFoodName.setText(food.getFoodName());
 		foodItemView.txtFoodHit.setText(food.getCalorie() + "");
+		
+//		convertView.setTag(R.id.btnAddCompare, food);
+		foodItemView.btnAddCompare.setTag(food);
+		foodItemView.btnAddCompare.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				listener.OnButtonClick((Food) v.getTag());
+			}
+		});
+		
 		//foodItemView.btnAddCompare.setText("加入对比");
 		//我又忘了那个callback函数怎么写= =
 		//foodItemView.txtAddCompare.setOnClickListener(l);
-		convertView.setTag(R.id.btnAddCompare, food);
 		
         return convertView;
 	}
 
+	public interface MyOnclickListener{
+		void OnButtonClick(Food food);
+	}
+	
 }

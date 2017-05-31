@@ -20,11 +20,16 @@ import android.app.Activity;
 public class FoodTask {
 	
 	private Activity activity;
-
-	public FoodTask(Activity activity) {
+	
+	private String tag1;
+	
+	public FoodTask(Activity activity, Object... tags) {
 		// TODO Auto-generated constructor stub
 		super();
 		this.activity = activity;
+		if(tags != null && tags.length != 0){
+			this.tag1 = tags[0].toString();
+		}
 	}
 
 	/**
@@ -34,7 +39,7 @@ public class FoodTask {
 	public void getFoodByName(String name){
 		AVQuery<Food> foodQuery = new AVQuery<Food>("Food");
 		foodQuery.whereContains("foodName", name);
-		foodQuery.findInBackground(new MyGetFoodByNameCallback(activity));
+		foodQuery.findInBackground(new MyGetFoodByNameCallback(activity, tag1));
 	}
 	
 	/**

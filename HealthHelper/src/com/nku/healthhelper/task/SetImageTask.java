@@ -8,9 +8,9 @@ import android.widget.ImageView;
 
 public class SetImageTask extends GetDataCallback {
 
-	private ImageView imgView;
+	private ImageView[] imgView;
 	
-	public SetImageTask(ImageView imgView) {
+	public SetImageTask(ImageView... imgView) {
 		// TODO Auto-generated constructor stub
 		this.imgView = imgView;
 	}
@@ -18,7 +18,9 @@ public class SetImageTask extends GetDataCallback {
 	@Override
 	public void done(byte[] bytes, AVException arg1) {
 		// TODO Auto-generated method stub
-		imgView.setImageBitmap(ImageUtil.Byte2Bitmap(bytes));
+		for (ImageView imageView : imgView) {
+			imageView.setImageBitmap(ImageUtil.Byte2Bitmap(bytes));
+		}
 	}
 
 }

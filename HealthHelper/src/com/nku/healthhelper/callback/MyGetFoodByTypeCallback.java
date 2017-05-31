@@ -58,9 +58,6 @@ public class MyGetFoodByTypeCallback extends FindCallback<Food> {
 				Map<String, Object> tempMap = new HashMap<String, Object>();
 				Food food = list.get(i);
 				tempMap.put("food", food);
-//				tempMap.put("FoodImage", food.getPhotoFile());
-//				tempMap.put("FoodName", food.getFoodName());
-//				tempMap.put("FoodHit", food.getCalorie());
 				foodItems.add(tempMap);
 			}
 			foodInfoAdapter = new FoodInfoAdapter(activity.getApplicationContext(), foodItems); //创建适配器   

@@ -48,7 +48,7 @@ public class FoodDetailsActivity extends Activity implements OnClickListener {
 		food = foodIntent.getBundleExtra("food").getParcelable("food");
 		if(food != null){
 			Log.e("food2", food.toString());
-			ImageUtil.SetImage(imgFooddetail, food.getPhotoFile());
+			ImageUtil.SetImage(food.getPhotoFile(), imgFooddetail);
 			txtFoodname.setText(food.getFoodName());
 			txtTitleFood.setText(food.getFoodName());
 			txtFoodhit.setText(food.getCalorie()+"");
@@ -77,9 +77,10 @@ public class FoodDetailsActivity extends Activity implements OnClickListener {
 			
 			break;
 		case R.id.imgReturnFoodlist:
-			Intent backIntent = new Intent(FoodDetailsActivity.this,FoodInfoActivity.class);
-			backIntent.putExtra("type", foodTypeString);
-			startActivity(backIntent);
+//			Intent backIntent = new Intent(FoodDetailsActivity.this,FoodInfoActivity.class);
+//			backIntent.putExtra("type", foodTypeString);
+//			startActivity(backIntent);
+			finish();
 			break;
 		default:
 			break;

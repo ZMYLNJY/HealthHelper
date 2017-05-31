@@ -1,12 +1,16 @@
 package com.nku.healthhelper;
 
+import com.nku.healthhelper.task.FoodTask;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class FoodActivity extends Activity implements OnClickListener{
 	private EditText edtFood;
@@ -16,6 +20,7 @@ public class FoodActivity extends Activity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_food);
 		
 		edtFood = (EditText)findViewById(R.id.edtFoodname);
@@ -49,6 +54,15 @@ public class FoodActivity extends Activity implements OnClickListener{
 		switch (v.getId()) {
 		case R.id.imgSearchFood:
 			//搜索食物
+			if(edtFood.getText() != null && !"".equals(edtFood.getText().toString())){
+				String foodName = edtFood.getText().toString();
+//				new FoodTask(this, "FoodActivity").getFoodByName(foodName);
+				Intent searchIntent  = new Intent(FoodActivity.this, FoodInfoActivity.class);
+				searchIntent.putExtra("name", foodName);
+				startActivity(searchIntent);
+			}else{
+				Toast.makeText(getApplicationContext(), "请输入食物名称", Toast.LENGTH_SHORT).show();
+			}
 			break;
 		case R.id.imgRice:
 			//进入主食

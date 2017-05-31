@@ -5,11 +5,11 @@ import com.nku.healthhelper.task.SetImageTask;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.widget.ImageView;
 
 public class ImageUtil {
 
-	public static ImageView imageView;
 	
 	public ImageUtil() {
 		// TODO Auto-generated constructor stub
@@ -24,8 +24,9 @@ public class ImageUtil {
 		return BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
 	}
 	
-	public static void SetImage(ImageView imgView, AVFile file){
+	public static void SetImage(AVFile file, ImageView... imgView){
 		file.getDataInBackground(new SetImageTask(imgView));
+		Log.e(file.getName(), file.toString());
 	}
 	
 }
