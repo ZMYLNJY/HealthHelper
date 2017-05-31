@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:id="@android:id/tabhost"  
+    android:layout_width="fill_parent"  
+    android:layout_height="fill_parent" >  
+  
+    <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            
+             <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="50dp"
+		        android:background="#00BCD4" >
+		        
+		        <ImageView
+		            android:id="@+id/imgClothesReturn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:layout_weight="1"
+		            android:src="@drawable/all_return" />
+		
+		        <TextView
+		            android:id="@+id/txtClothesTitle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:layout_centerVertical="true"
+		            android:layout_weight="4"
+		            android:gravity="center_horizontal"
+		            android:text="穿衣"
+		            android:textColor="#ffffff"
+		            android:textSize="20dp" />
+		        
+		
+		    </RelativeLayout>
+		    
+             <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="#F3F3FA"
+                  android:layout_weight="1"
+                  android:paddingLeft="10dp" 
+                  android:paddingRight="10dp"
+                  android:paddingTop="10dp">
+		         
+                 <TabWidget  
+		            android:id="@android:id/tabs"  
+		            android:layout_width="fill_parent"  
+		            android:layout_height="wrap_content"  
+		            android:layout_gravity="center_vertical" >  
+		        </TabWidget>  
+                 
+            </LinearLayout>	
+             
+            
+            
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+            
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rloShowClothes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp" >
+
+				    <ImageSwitcher
+				        android:id="@+id/imgClothesSwitcher"
+				        android:layout_width="wrap_content"
+				        android:layout_height="300dp"
+				        android:layout_below="@+id/txtClothesTip"
+				        android:layout_centerHorizontal="true"
+				        android:layout_marginTop="10dp" >
+				    </ImageSwitcher>
+
+				    <Gallery
+				        android:id="@+id/clothesGallery"
+				        android:layout_width="wrap_content"
+				        android:layout_height="100dp"
+				        android:layout_alignParentBottom="true"
+				        android:layout_centerHorizontal="true" />
+
+				    <TextView
+				        android:id="@+id/txtClothesTip"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentTop="true"
+				        android:layout_centerHorizontal="true"
+				        android:text="建议穿薄外套或牛仔裤等服装。"
+				        android:textSize="20dp" />
+                    
+                </RelativeLayout>
+           
+            </FrameLayout>
+            
+        </LinearLayout>
+ 
+  
+    </LinearLayout>
+  
+</TabHost>  

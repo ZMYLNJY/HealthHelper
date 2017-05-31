@@ -71,7 +71,7 @@ public class MyGetFoodByTypeCallback extends FindCallback<Food> {
 				public void onItemClick(AdapterView<?> arg0, View view,
 						int arg2, long arg3) {
 					// TODO Auto-generated method stub
-					Food food = (Food) view.getTag(R.id.btn_Main_Submit);
+					Food food = (Food) view.getTag(R.id.btnAddCompare);
 					
 					Log.e("food", food.toString());
 					

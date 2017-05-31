@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:id="@android:id/tabhost"  
+    android:layout_width="fill_parent"  
+    android:layout_height="fill_parent" >  
+  
+    <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+            
+             <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="50dp"
+		        android:background="#00BCD4" >
+		        
+		        <ImageView
+		            android:id="@+id/imgShowFutureReturn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:layout_weight="1"
+		            android:src="@drawable/all_return" />
+		
+		        <TextView
+		            android:id="@+id/txtShowFutureTitle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerHorizontal="true"
+		            android:layout_centerVertical="true"
+		            android:layout_weight="4"
+		            android:gravity="center_horizontal"
+		            android:text="六日预报"
+		            android:textColor="#ffffff"
+		            android:textSize="20dp" />
+		        
+		
+		    </RelativeLayout>
+		    
+             <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="#F3F3FA"
+                  android:layout_weight="1"
+                  android:paddingLeft="10dp" 
+                  android:paddingRight="10dp"
+                  android:paddingTop="10dp">
+		         
+                 <TabWidget  
+		            android:id="@android:id/tabs"  
+		            android:layout_width="fill_parent"  
+		            android:layout_height="wrap_content"  
+		            android:layout_gravity="center_vertical" >  
+		        </TabWidget>  
+                 
+            </LinearLayout>	
+             
+            
+            
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+            
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout 
+				    android:id="@+id/lloFutureShow"
+				    android:background="#F3F3FA"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:orientation="vertical"
+				    android:padding="20dp"
+				    android:layout_weight="3" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center_vertical"
+                            android:src="@drawable/show_future_sunrise" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="日出"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:id="@+id/txtShowFutureSunrise"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentTop="true"
+                                    android:text="06:28"
+                                    android:textSize="20dp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="日落"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:id="@+id/txtShowFutureSunset"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentTop="true"
+                                    android:text="20:17"
+                                    android:textSize="20dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center_vertical"                       
+                            android:src="@drawable/show_future_temperature" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="白天"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:id="@+id/txtShowFutureDayTem"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentTop="true"
+                                    android:text="24°C 小雨"
+                                    android:textSize="20dp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="晚上"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:id="@+id/txtShowFutureNightTem"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentTop="true"
+                                    android:text="17°C 小雨"
+                                    android:textSize="20dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center_vertical"                       
+                            android:src="@drawable/show_future_wind" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="白天"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:id="@+id/txtShowFutureDayWind"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentTop="true"
+                                    android:text="微风10m/h"
+                                    android:textSize="20dp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="晚上"
+                                    android:textSize="20dp" />
+
+                                <TextView
+                                    android:id="@+id/txtShowFutureNightWind"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_alignParentTop="true"
+                                    android:text="微风10m/h"
+                                    android:textSize="20dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp" >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/show_future_cold"
+                                    android:layout_marginBottom="5dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="感冒"
+                                    android:textSize="18dp" 
+                                    android:layout_marginBottom="5dp"/>
+                                
+                                <TextView
+                                    android:id="@+id/txtShowFutureCold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="少发"
+                                    android:textSize="15dp"  />
+
+                            </LinearLayout>
+                            
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/show_future_clothes"
+                                    android:layout_marginBottom="5dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="穿衣"
+                                    android:textSize="18dp" 
+                                    android:layout_marginBottom="5dp"/>
+                                
+                                <TextView
+                                    android:id="@+id/txtShowFutureClothes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="清爽"
+                                    android:textSize="15dp"  />
+
+                            </LinearLayout>
+                            
+                             <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/show_future_uv2"
+                                    android:layout_marginBottom="5dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="紫外线"
+                                    android:textSize="18dp" 
+                                    android:layout_marginBottom="5dp"/>
+                                
+                                <TextView
+                                    android:id="@+id/txtShowFutureUV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="最弱"
+                                    android:textSize="15dp"  />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+           
+            </FrameLayout>
+            
+        </LinearLayout>
+ 
+  
+    </LinearLayout>
+  
+</TabHost>  

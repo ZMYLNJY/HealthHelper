@@ -4,6 +4,17 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"  />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"  />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"  />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"  />
+    <uses-permission android:name="android.permission.READ_LOGS"  />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    
     <!-- 基础模块（必须加入以下声明）START -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -40,22 +51,23 @@
         <!-- 反馈组件（需要加入以下声明）START -->
         <!--
              <activity android:name="com.avos.avoscloud.feedback.ThreadActivity" >
-        </activity>
+        </activity>
         -->
         <!-- 反馈组件 END -->
 
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name=".FoodActivity"
-            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".FoodActivity"
+            android:label="@string/app_name" >
+            
         </activity>
         <activity
             android:name=".FoodAddRecordActivity"
@@ -80,6 +92,22 @@
         <activity
             android:name=".FoodSearchResultActivity"
             android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ClothesActivity"
+            android:label="@string/title_activity_clothes" >
+        </activity>
+        <activity
+            android:name=".LocationAddActivity"
+            android:label="@string/title_activity_location_add" >
+        </activity>
+        <activity
+            android:name=".ShowFutureActivity"
+            android:label="@string/title_activity_show_future" >
+        </activity>
+        <activity
+            android:name=".UserActivity"
+            android:label="@string/title_activity_user" >
         </activity>
     </application>
 

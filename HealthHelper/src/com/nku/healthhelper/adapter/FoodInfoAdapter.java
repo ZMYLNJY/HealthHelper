@@ -59,7 +59,7 @@ public class FoodInfoAdapter extends BaseAdapter {
 		foodItemView.txtFoodName.setText(food.getFoodName());
 		foodItemView.txtFoodHit.setText(food.getCalorie() + "");
         
-		convertView.setTag(R.id.btn_Main_Submit, food);
+		convertView.setTag(R.id.btnAddCompare, food);
 		
         return convertView;
 	}
