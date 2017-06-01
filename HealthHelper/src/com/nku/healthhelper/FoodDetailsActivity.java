@@ -1,5 +1,6 @@
 package com.nku.healthhelper;
 
+import com.avos.avoscloud.AVUser;
 import com.nku.healthhelper.entity.Food;
 import com.nku.healthhelper.util.ImageUtil;
 
@@ -8,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -19,18 +21,19 @@ public class FoodDetailsActivity extends Activity implements OnClickListener {
 	private TextView txtFat,txtProtein,txtSugar,txtCalcuim,txtTips;
 	private TextView txtFoodname,txtFoodhit;
 	private TextView txtTitleFood;
-	private String foodTypeString;
+//	private String foodTypeString;
 	private Food food;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_fooddetails);
 		btnAddRecord = (Button) findViewById(R.id.btnAddRecord);
 		btnAddCompare = (Button)findViewById(R.id.btnAddCompare);
 		imgFooddetail = (ImageView)findViewById(R.id.imgFooddetail);
-		imgBackFoodList = (ImageView)findViewById(R.id.imgReturnFoodlist);
+		imgBackFoodList = (ImageView)findViewById(R.id.imgFoodDetailReturn);
 		txtFoodname = (TextView)findViewById(R.id.txtFooddetailname);
 		txtFoodhit = (TextView)findViewById(R.id.txtFooddetailhit);
 		txtFat = (TextView)findViewById(R.id.txtFooddetailfat);
@@ -56,9 +59,9 @@ public class FoodDetailsActivity extends Activity implements OnClickListener {
 			txtCalcuim.setText(food.getNutrition().get("Ca")+"");
 			txtProtein.setText(food.getNutrition().get("Protein")+"");
 			txtSugar.setText(food.getNutrition().get("Carbonhydro")+"");
-			txtTips.setText(food.getNutrition().get("Description")+"");
+			txtTips.setText(food.getDescription()+"");
 			
-			foodTypeString = food.getType();
+//			foodTypeString = food.getType();
 			
 		}
 	}
@@ -74,9 +77,19 @@ public class FoodDetailsActivity extends Activity implements OnClickListener {
 			startActivity(compareIntent);
 			break;
 		case R.id.btnAddRecord:
-			
+			AVUser users =  AVUser.getCurrentUser();
+			if(users != null){
+				Intent intent = new Intent(FoodDetailsActivity.this, FoodAddRecordActivity.class);
+				Bundle bundle2 = new Bundle();
+				bundle2.putParcelable("food", food);
+				intent.putExtra("food", bundle2);
+				startActivity(intent);
+			}else{
+				Intent intent = new Intent(FoodDetailsActivity.this, LoginActivity.class);
+				startActivity(intent);
+			}
 			break;
-		case R.id.imgReturnFoodlist:
+		case R.id.imgFoodDetailReturn:
 //			Intent backIntent = new Intent(FoodDetailsActivity.this,FoodInfoActivity.class);
 //			backIntent.putExtra("type", foodTypeString);
 //			startActivity(backIntent);

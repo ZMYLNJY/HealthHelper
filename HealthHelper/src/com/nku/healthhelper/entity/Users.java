@@ -8,6 +8,12 @@ import com.avos.avoscloud.AVUser;
 
 import android.os.Parcel;
 
+/**
+ * 注意：此entity可能会作废。
+ * @author eumes
+ *
+ */
+
 public class Users extends AVUser {
 
 //	public static int  HAS_THUMBED = 1;

@@ -1,12 +1,212 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="${relativePackage}.${activityClass}" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#00BCD4" >
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/txtFoodAddTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="添加记录"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imgReturnFoodInfoA"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/all_return" />
+
+        <ImageView
+            android:id="@+id/imgAddFinished"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/all_go" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@android:style/TextAppearance.Medium.Inverse"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:gravity="center_vertical"
+            android:text="      选择日期"
+            android:textColor="@android:color/black" />
+        
+         <TextView
+            android:id="@+id/txtDateDisp"
+            style="@android:style/TextAppearance.Medium.Inverse"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2017年6月1日"
+            android:textColor="@android:color/black" 
+            android:background="#ffffff"/>
+
+        <!-- <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:calendarViewShown="true"
+                android:spinnersShown="false" />
+        </LinearLayout> -->
+
+        <TextView
+            style="@android:style/TextAppearance.Medium.Inverse"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:gravity="center_vertical"
+            android:text="      选择餐别"
+            android:textColor="@android:color/black" />
+
+        <RadioGroup
+            android:id="@+id/rdgChooseKind"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="horizontal" 
+            android:background="#ffffff">
+
+                <RadioButton
+                    android:id="@+id/rbBreakfast"
+                    style="@style/main_tab_bottom"
+                    android:checked="true"
+                    android:text="早餐"
+                    android:textColor="#00BCD4"
+                    android:textSize="20dp" 
+                    android:gravity="center"/>
+
+                <RadioButton
+                    android:id="@+id/rbLunch"
+                    style="@style/main_tab_bottom"
+                    android:checked="false"
+                    android:text="午餐"
+                    android:textColor="#8a8a8a"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/rbDinner"
+                    style="@style/main_tab_bottom"
+                    android:text="晚餐"
+                    android:textColor="#8a8a8a"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/rbYexiao"
+                    style="@style/main_tab_bottom"
+                    android:text="夜宵"
+                    android:textColor="#8a8a8a"
+                    android:textSize="20dp" />
+        </RadioGroup>
+        
+        <TextView
+            style="@android:style/TextAppearance.Medium.Inverse"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:gravity="center_vertical"
+            android:text="      选择分量"
+            android:textColor="@android:color/black" />
+        
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+		    android:background="#ffffff"
+		    android:gravity="center_vertical">
+		    <EditText 
+		        android:id="@+id/edtAddWeight"
+		        android:layout_height="wrap_content"
+		        android:layout_width="0dp"
+		        android:layout_weight="1"
+		        style="@android:style/Theme.Holo.Light"
+		        android:hint="分量"
+		        android:gravity="center"
+		        android:inputType="number"/>
+		    <TextView 
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1"
+		        android:text="克"
+		        style="@android:style/TextAppearance.Medium.Inverse"
+		        android:textColor="@android:color/black"
+		        android:gravity="center"/>
+		    <TextView 
+		        android:id="@+id/txtFoodCaro"
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1"
+		        android:text="0"
+		        style="@android:style/TextAppearance.Medium.Inverse"
+		        android:textColor="@android:color/darker_gray"
+		        android:gravity="center"/>
+		    <TextView 
+		        android:layout_width="0dp"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1"
+		        android:text="千卡"
+		        style="@android:style/TextAppearance.Medium.Inverse"
+		        android:textColor="@android:color/black"
+		        android:gravity="center"/>
+		</LinearLayout>        
+        
+		<TextView
+            style="@android:style/TextAppearance.Medium.Inverse"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:gravity="center_vertical"
+            android:text="      找食小助手"
+            android:textColor="@android:color/black" />
+		
+		<TextView
+		    android:id="@+id/txtFoodDes"
+            style="@android:style/TextAppearance.Medium.Inverse"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:text="找食小助手"
+            android:textColor="@android:color/black" 
+            android:inputType="textMultiLine"
+            android:background="#ffffff"/>
+		
+		<TextView 
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="0.8"
+		    android:text="   "/>
+		
+    </LinearLayout>
+
+</LinearLayout>

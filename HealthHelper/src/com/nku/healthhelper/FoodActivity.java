@@ -1,6 +1,5 @@
 package com.nku.healthhelper;
 
-import com.nku.healthhelper.task.FoodTask;
 
 import android.app.Activity;
 import android.content.Intent;

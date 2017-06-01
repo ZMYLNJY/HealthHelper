@@ -6,19 +6,21 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
-import android.widget.Button;
+import android.widget.ImageView;
 
 public class FoodInfoActivity extends Activity implements OnClickListener{
-	private Button btnBack;
+	private ImageView imgReturn;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_foodinfo);
-		btnBack = (Button)findViewById(R.id.btnBacktoFood);
+		imgReturn = (ImageView)findViewById(R.id.imgFoodInfoReturn);
 		
-		btnBack.setOnClickListener(this);
+		imgReturn.setOnClickListener(this);
 		
 		Intent intent = getIntent();
 		String type = intent.getStringExtra("type");
@@ -37,7 +39,7 @@ public class FoodInfoActivity extends Activity implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		if(v.getId()==R.id.btnBacktoFood){
+		if(v.getId()==R.id.imgFoodInfoReturn){
 //			Intent intent = new Intent(FoodInfoActivity.this,FoodActivity.class);
 //			startActivity(intent);
 			finish();

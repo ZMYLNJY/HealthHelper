@@ -25,8 +25,10 @@ public class ImageUtil {
 	}
 	
 	public static void SetImage(AVFile file, ImageView... imgView){
-		file.getDataInBackground(new SetImageTask(imgView));
-		Log.e(file.getName(), file.toString());
+		if(file != null){
+			file.getDataInBackground(new SetImageTask(imgView));
+			Log.e(file.getName(), file.toString());
+		}
 	}
 	
 }

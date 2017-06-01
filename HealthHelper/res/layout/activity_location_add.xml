@@ -9,17 +9,17 @@
         android:id="@+id/rloLocationAdd"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#00BCD4">
+        android:background="#00BCD4" >
 
         <TextView
             android:id="@+id/txtLocationAddTitle"
-            android:text="添加城市"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textColor="#ffffff"         
+            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:text="添加城市"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
 
         <ImageView
             android:id="@+id/imgLocationAddReturn"
@@ -28,13 +28,12 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:src="@drawable/all_return" />
-
     </RelativeLayout>
-    
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:padding="10dp">
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
 
         <EditText
             android:id="@+id/edtLocationAddSearch"
@@ -52,7 +51,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/all_go" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -64,9 +62,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:textColor="#BDBDBD"
-            android:text="热门城市" />
-
+            android:text="热门城市"
+            android:textColor="#BDBDBD" />
     </LinearLayout>
 
     <LinearLayout
@@ -74,7 +71,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp" >
-        
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -84,213 +81,206 @@
                 android:id="@+id/btnHotCity1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 北京市 "
-                android:textColor="#BDBDBD"
-                android:layout_weight="1"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/circle_corner_button_selector" />
-            
+                android:layout_weight="1"
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 北京市 "
+                android:textColor="#BDBDBD" />
+
             <Button
                 android:id="@+id/btnHotCity2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 上海市 "
-                android:textColor="#BDBDBD"
-                android:layout_weight="1"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/circle_corner_button_selector" />
-            
+                android:layout_weight="1"
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 上海市 "
+                android:textColor="#BDBDBD" />
+
             <Button
                 android:id="@+id/btnHotCity3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 东莞市 "
-                android:textColor="#BDBDBD"
                 android:layout_weight="1"
-                android:background="@drawable/circle_corner_button_selector" />
-
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 东莞市 "
+                android:textColor="#BDBDBD" />
         </LinearLayout>
-        
-         <LinearLayout
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"  >
+            android:layout_marginBottom="10dp" >
 
             <Button
                 android:id="@+id/btnHotCity4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 深圳市 "
-                android:textColor="#BDBDBD"
-                android:layout_weight="1"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/circle_corner_button_selector" />
-            
+                android:layout_weight="1"
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 深圳市 "
+                android:textColor="#BDBDBD" />
+
             <Button
                 android:id="@+id/btnHotCity5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 天津市 "
-                android:textColor="#BDBDBD"
-                android:layout_weight="1"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/circle_corner_button_selector" />
-            
+                android:layout_weight="1"
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 天津市 "
+                android:textColor="#BDBDBD" />
+
             <Button
                 android:id="@+id/btnHotCity6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 郑州市 "
-                android:textColor="#BDBDBD"
                 android:layout_weight="1"
-                android:background="@drawable/circle_corner_button_selector" />
-
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 郑州市 "
+                android:textColor="#BDBDBD" />
         </LinearLayout>
-        
-         <LinearLayout
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"  >
+            android:layout_marginBottom="10dp" >
 
             <Button
                 android:id="@+id/btnHotCity7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 苏州市 "
-                android:textColor="#BDBDBD"
-                android:layout_weight="1"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/circle_corner_button_selector" />
-            
+                android:layout_weight="1"
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 苏州市 "
+                android:textColor="#BDBDBD" />
+
             <Button
                 android:id="@+id/btnHotCity8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 南京市 "
-                android:textColor="#BDBDBD"
-                android:layout_weight="1"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/circle_corner_button_selector" />
-            
+                android:layout_weight="1"
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 南京市 "
+                android:textColor="#BDBDBD" />
+
             <Button
                 android:id="@+id/btnHotCity9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 武汉市 "
-                android:textColor="#BDBDBD"
                 android:layout_weight="1"
-                android:background="@drawable/circle_corner_button_selector" />
-
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 武汉市 "
+                android:textColor="#BDBDBD" />
         </LinearLayout>
-        
-         <LinearLayout
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"  >
+            android:layout_marginBottom="10dp" >
 
             <Button
                 android:id="@+id/btnHotCity10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 成都市 "
-                android:textColor="#BDBDBD"
-                android:layout_weight="1"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/circle_corner_button_selector" />
-            
+                android:layout_weight="1"
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 成都市 "
+                android:textColor="#BDBDBD" />
+
             <Button
                 android:id="@+id/btnHotCity11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 重庆市 "
-                android:textColor="#BDBDBD"
-                android:layout_weight="1"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/circle_corner_button_selector" />
-            
+                android:layout_weight="1"
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 重庆市 "
+                android:textColor="#BDBDBD" />
+
             <Button
                 android:id="@+id/btnHotCity12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 青岛市 "
-                android:textColor="#BDBDBD"
                 android:layout_weight="1"
-                android:background="@drawable/circle_corner_button_selector" />
-
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 青岛市 "
+                android:textColor="#BDBDBD" />
         </LinearLayout>
-        
-         <LinearLayout
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"  >
+            android:layout_marginBottom="10dp" >
 
             <Button
                 android:id="@+id/btnHotCity13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 大理市 "
-                android:textColor="#BDBDBD"
-                android:layout_weight="1"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/circle_corner_button_selector" />
-            
+                android:layout_weight="1"
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 大理市 "
+                android:textColor="#BDBDBD" />
+
             <Button
                 android:id="@+id/btnHotCity14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 丽江市 "
-                android:textColor="#BDBDBD"
-                android:layout_weight="1"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/circle_corner_button_selector" />
-            
+                android:layout_weight="1"
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 丽江市 "
+                android:textColor="#BDBDBD" />
+
             <Button
                 android:id="@+id/btnHotCity15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 沈阳市 "
-                android:textColor="#BDBDBD"
                 android:layout_weight="1"
-                android:background="@drawable/circle_corner_button_selector" />
-
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 沈阳市 "
+                android:textColor="#BDBDBD" />
         </LinearLayout>
-        
-         <LinearLayout
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"  >
+            android:layout_marginBottom="10dp" >
 
             <Button
                 android:id="@+id/btnHotCity16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 广州市 "
-                android:textColor="#BDBDBD"
-                android:layout_weight="1"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/circle_corner_button_selector" />
-            
+                android:layout_weight="1"
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 广州市 "
+                android:textColor="#BDBDBD" />
+
             <Button
                 android:id="@+id/btnHotCity17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 杭州市 "
-                android:textColor="#BDBDBD"
-                android:layout_weight="1"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/circle_corner_button_selector" />
-            
+                android:layout_weight="1"
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 杭州市 "
+                android:textColor="#BDBDBD" />
+
             <Button
                 android:id="@+id/btnHotCity18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 大连市 "
-                android:textColor="#BDBDBD"
                 android:layout_weight="1"
-                android:background="@drawable/circle_corner_button_selector" />
-
+                android:background="@drawable/circle_corner_button_selector"
+                android:text=" 大连市 "
+                android:textColor="#BDBDBD" />
         </LinearLayout>
-
     </LinearLayout>
 
 </LinearLayout>

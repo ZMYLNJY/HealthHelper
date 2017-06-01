@@ -53,6 +53,8 @@ public class FoodInfoAdapter extends BaseAdapter {
 		//璁剧疆鏂囧瓧鍜屽浘鐗�   
 		Food food = (Food) foodItems.get(position).get("food");
 		AVFile file = (AVFile) food.getPhotoFile();
+		
+		
 		//后台进行下载图片文件
 //		file.getDataInBackground(new SetImageTask(foodItemView.imgFoodItem));
 		ImageUtil.SetImage(file, foodItemView.imgFoodItem);

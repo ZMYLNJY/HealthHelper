@@ -3,7 +3,7 @@
 
     <string name="app_name">HealthHelper</string>
     <string name="hello_world">Hello world!</string>
-	 <string name="action_settings">Settings</string>
+    <string name="action_settings">Settings</string>
     <string name="title_activity_main">HealthHelper</string>
     <string name="title_activity_clothes">ClothesActivity</string>
     <string name="title_activity_location_add">LocationAddActivity</string>
@@ -11,5 +11,9 @@
     <string name="title_activity_user">UserActivity</string>
     <string name="title_activity_location_show">LocationShowActivity</string>
     <string name="title_activity_food">FoodActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_my_record">MyRecordActivity</string>
+    <string name="title_activity_update_user_info">UpdateUserInfoActivity</string>
 
 </resources>

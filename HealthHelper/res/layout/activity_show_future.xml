@@ -1,90 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?>  
-<TabHost xmlns:android="http://schemas.android.com/apk/res/android"  
-    android:id="@android:id/tabhost"  
-    android:layout_width="fill_parent"  
-    android:layout_height="fill_parent" >  
-  
-    <LinearLayout 
-        android:orientation="vertical"
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        
-        
-      <LinearLayout
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
-            
-            
-             <RelativeLayout
-		        android:layout_width="match_parent"
-		        android:layout_height="50dp"
-		        android:background="#00BCD4" >
-		        
-		        <ImageView
-		            android:id="@+id/imgShowFutureReturn"
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:layout_alignParentLeft="true"
-		            android:layout_centerVertical="true"
-		            android:layout_weight="1"
-		            android:src="@drawable/all_return" />
-		
-		        <TextView
-		            android:id="@+id/txtShowFutureTitle"
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:layout_centerHorizontal="true"
-		            android:layout_centerVertical="true"
-		            android:layout_weight="4"
-		            android:gravity="center_horizontal"
-		            android:text="六日预报"
-		            android:textColor="#ffffff"
-		            android:textSize="20dp" />
-		        
-		
-		    </RelativeLayout>
-		    
-             <LinearLayout
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:background="#F3F3FA"
-                  android:layout_weight="1"
-                  android:paddingLeft="10dp" 
-                  android:paddingRight="10dp"
-                  android:paddingTop="10dp">
-		         
-                 <TabWidget  
-		            android:id="@android:id/tabs"  
-		            android:layout_width="fill_parent"  
-		            android:layout_height="wrap_content"  
-		            android:layout_gravity="center_vertical" >  
-		        </TabWidget>  
-                 
-            </LinearLayout>	
-             
-            
-            
-            
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#00BCD4" >
+
+                <ImageView
+                    android:id="@+id/imgShowFutureReturn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:src="@drawable/all_return" />
+
+                <TextView
+                    android:id="@+id/txtShowFutureTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="4"
+                    android:gravity="center_horizontal"
+                    android:text="六日预报"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#F3F3FA"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp" >
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" >
+                </TabWidget>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="fill_parent" >
-            
+
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="fill_parent" >
 
-                <LinearLayout 
-				    android:id="@+id/lloFutureShow"
-				    android:background="#F3F3FA"
-				    android:layout_width="match_parent"
-				    android:layout_height="match_parent"
-				    android:orientation="vertical"
-				    android:padding="20dp"
-				    android:layout_weight="3" >
+                <LinearLayout
+                    android:id="@+id/lloFutureShow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="#F3F3FA"
+                    android:orientation="vertical"
+                    android:padding="20dp" >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -94,8 +85,8 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginRight="10dp"
                             android:layout_marginBottom="10dp"
+                            android:layout_marginRight="10dp"
                             android:gravity="center_vertical"
                             android:src="@drawable/show_future_sunrise" />
 
@@ -148,10 +139,8 @@
                                     android:textSize="20dp" />
                             </RelativeLayout>
                         </LinearLayout>
-
                     </LinearLayout>
-                    
-                    
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -160,9 +149,9 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginRight="10dp"
                             android:layout_marginBottom="10dp"
-                            android:gravity="center_vertical"                       
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_vertical"
                             android:src="@drawable/show_future_temperature" />
 
                         <LinearLayout
@@ -214,10 +203,8 @@
                                     android:textSize="20dp" />
                             </RelativeLayout>
                         </LinearLayout>
-
                     </LinearLayout>
-                    
-                    
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -226,9 +213,9 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginRight="10dp"
                             android:layout_marginBottom="10dp"
-                            android:gravity="center_vertical"                       
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_vertical"
                             android:src="@drawable/show_future_wind" />
 
                         <LinearLayout
@@ -280,7 +267,6 @@
                                     android:textSize="20dp" />
                             </RelativeLayout>
                         </LinearLayout>
-
                     </LinearLayout>
 
                     <LinearLayout
@@ -303,25 +289,24 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/show_future_cold"
-                                    android:layout_marginBottom="5dp" />
+                                    android:layout_marginBottom="5dp"
+                                    android:src="@drawable/show_future_cold" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
                                     android:text="感冒"
-                                    android:textSize="18dp" 
-                                    android:layout_marginBottom="5dp"/>
-                                
+                                    android:textSize="18dp" />
+
                                 <TextView
                                     android:id="@+id/txtShowFutureCold"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="少发"
-                                    android:textSize="15dp"  />
-
+                                    android:textSize="15dp" />
                             </LinearLayout>
-                            
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -332,26 +317,25 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/show_future_clothes"
-                                    android:layout_marginBottom="5dp" />
+                                    android:layout_marginBottom="5dp"
+                                    android:src="@drawable/show_future_clothes" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
                                     android:text="穿衣"
-                                    android:textSize="18dp" 
-                                    android:layout_marginBottom="5dp"/>
-                                
+                                    android:textSize="18dp" />
+
                                 <TextView
                                     android:id="@+id/txtShowFutureClothes"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="清爽"
-                                    android:textSize="15dp"  />
-
+                                    android:textSize="15dp" />
                             </LinearLayout>
-                            
-                             <LinearLayout
+
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -361,36 +345,28 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/show_future_uv2"
-                                    android:layout_marginBottom="5dp" />
+                                    android:layout_marginBottom="5dp"
+                                    android:src="@drawable/show_future_uv2" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
                                     android:text="紫外线"
-                                    android:textSize="18dp" 
-                                    android:layout_marginBottom="5dp"/>
-                                
+                                    android:textSize="18dp" />
+
                                 <TextView
                                     android:id="@+id/txtShowFutureUV"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="最弱"
-                                    android:textSize="15dp"  />
-
+                                    android:textSize="15dp" />
                             </LinearLayout>
-
                         </LinearLayout>
-
                     </LinearLayout>
-
                 </LinearLayout>
-           
             </FrameLayout>
-            
         </LinearLayout>
- 
-  
     </LinearLayout>
-  
-</TabHost>  
+
+</TabHost>

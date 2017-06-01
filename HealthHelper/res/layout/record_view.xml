@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:background="#ffffff">
+    
+	<LinearLayout 
+	    android:layout_width="0dp"
+	    android:layout_height="match_parent"
+	    android:layout_weight="2"
+	    android:orientation="vertical"
+	    android:gravity="left">
+	    
+	    <TextView 
+	        android:id="@+id/txtRecordName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="0dp"
+	        android:layout_weight="1.5"
+	        android:text="米饭"
+	        android:textColor="@android:color/black"
+	        style="@android:style/TextAppearance.Medium.Inverse"
+	        android:gravity="center_vertical"/>
+	    <TextView 
+	        android:id="@+id/txtRecordWeight"
+	        android:layout_width="wrap_content"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:text="100g"
+	        android:textColor="@android:color/darker_gray"
+	        style="@android:style/TextAppearance.Small.Inverse"
+	        android:gravity="center_vertical"/>
+	    
+	</LinearLayout>
+	
+	<TextView 
+	    android:id="@+id/txtRecordCaro"
+	    android:layout_width="0dp"
+	    android:layout_height="match_parent"
+	    android:layout_weight="1"
+	    android:gravity="center_vertical"
+	    android:text="100千卡"
+	    android:textColor="@android:color/black"
+	    style="@android:style/TextAppearance.Medium.Inverse"/>
+	
+	<ImageView
+            android:id="@+id/imgGoDetail"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/my_arrow" />
+    
+</LinearLayout>

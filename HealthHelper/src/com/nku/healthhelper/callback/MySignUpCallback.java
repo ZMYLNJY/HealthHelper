@@ -20,7 +20,7 @@ public class MySignUpCallback extends SignUpCallback {
 	public void done(AVException e) {
 		// TODO Auto-generated method stub
 		if(e == null){
-			Toast.makeText(activity.getApplicationContext(), "注册成功！", Toast.LENGTH_LONG).show();
+			Toast.makeText(activity.getApplicationContext(), "注册成功！请在该界面进行登录！", Toast.LENGTH_LONG).show();
 		}
 		else if(e.getCode() == AVException.USERNAME_TAKEN){
 			Toast.makeText(activity.getApplicationContext(), "用户名已被使用！", Toast.LENGTH_LONG).show();

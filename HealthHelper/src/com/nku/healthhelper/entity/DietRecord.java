@@ -1,10 +1,9 @@
 package com.nku.healthhelper.entity;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import com.avos.avoscloud.AVClassName;
 import com.avos.avoscloud.AVObject;
+import com.avos.avoscloud.AVUser;
 
 @AVClassName("Dietrecord")
 public class DietRecord extends AVObject {
@@ -18,10 +17,10 @@ public class DietRecord extends AVObject {
 	}
 
 //	about user
-	public void setUser(Users users){
+	public void setUser(AVUser users){
 		put("user", users);
 	}
-	public Users getUser(){
+	public AVUser getUser(){
 		return getAVUser("user");
 	}
 	
@@ -41,14 +40,14 @@ public class DietRecord extends AVObject {
 		return getString("kind");
 	}
 	
-/*//	about weight
-	public void setWeight(int weight){
+//	about weight
+	public void setWeight(String weight){
 		put("weight", weight);
 	}
-	public int getWeight(){
-		return getInt("weight");
+	public String getWeight(){
+		return getString("weight");
 	}
-	
+/*	
 //	about food
 	public void setFoodList(List<Food> listFood){
 		if(null == listFood) return;
@@ -71,25 +70,32 @@ public class DietRecord extends AVObject {
 	}*/
 	
 //	about food detail
-	public void setFoodList(List<DietRecordDetail> listFood){
-		if(null == listFood) return;
-		addAll("foodList", listFood);
+//	public void setFoodList(List<DietRecordDetail> listFood){
+//		if(null == listFood) return;
+//		addAll("foodList", listFood);
+//	}
+//	@SuppressWarnings("unchecked")
+//	public List<DietRecordDetail> getFoodList(){
+//		return getList("foodList");
+//	}
+//	public int getFoodListCount(){
+//		return getFoodList().size();
+//	}
+//	public void addFoodList(DietRecordDetail food){
+//		addUnique("foodList", food);
+//	}
+//	public void removeFoodList(DietRecordDetail food){
+//		List<DietRecordDetail> list = new ArrayList<DietRecordDetail>();
+//		list.add(food);
+//		removeAll("foodList", list);
+//	}
+	public void setFood(Food food){
+		put("food", food);
 	}
-	@SuppressWarnings("unchecked")
-	public List<DietRecordDetail> getFoodList(){
-		return getList("foodList");
+	public Food getFood(){
+		return (Food)getAVObject("food");
 	}
-	public int getFoodListCount(){
-		return getFoodList().size();
-	}
-	public void addFoodList(DietRecordDetail food){
-		addUnique("foodList", food);
-	}
-	public void removeFoodList(DietRecordDetail food){
-		List<DietRecordDetail> list = new ArrayList<DietRecordDetail>();
-		list.add(food);
-		removeAll("foodList", list);
-	}
+	
 	
 //	about calories
 	public void setCalories(double calories){

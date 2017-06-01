@@ -2,7 +2,6 @@ package com.nku.healthhelper;
 
 import com.avos.avoscloud.AVFile;
 import com.nku.healthhelper.entity.Food;
-import com.nku.healthhelper.task.SetImageTask;
 import com.nku.healthhelper.util.ImageUtil;
 
 import android.app.Activity;

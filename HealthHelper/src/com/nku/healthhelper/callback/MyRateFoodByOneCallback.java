@@ -10,7 +10,7 @@ import android.app.Activity;
 
 /**
  * 某用户对某食物进行打分后调用的callback。
- * @author Administrator
+ * @author eumes
  *
  */
 public class MyRateFoodByOneCallback extends SaveCallback {

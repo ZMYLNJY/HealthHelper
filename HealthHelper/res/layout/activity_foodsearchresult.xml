@@ -3,21 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-     <RelativeLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#00BCD4">
+        android:background="#00BCD4" >
 
         <TextView
             android:id="@+id/txtSearchFood"
-            android:text="米饭"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textColor="#ffffff"         
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="13dp"
             android:layout_toRightOf="@+id/imgReturnSearchFood"
-            android:layout_marginTop="13dp" 
-            android:layout_marginLeft="20dp"/>
+            android:text="米饭"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
 
         <ImageView
             android:id="@+id/imgReturnSearchFood"
@@ -26,11 +27,12 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:src="@drawable/all_return" />
-	</RelativeLayout>
-	<ListView 
-	    android:layout_height="wrap_content"
-	    android:layout_width="match_parent"
-	    android:id="@+id/lvSearchResult"></ListView>
-    
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lvSearchResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
 
 </LinearLayout>

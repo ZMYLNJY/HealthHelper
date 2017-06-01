@@ -3,224 +3,290 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <TextView 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="查询食物信息"
-        android:textSize="20sp"
-        android:gravity="center"/>
-    <LinearLayout 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:id="@+id/llySearchFood">   
-        <EditText 
+
+    <RelativeLayout
+        android:id="@+id/rloWeatherTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#00BCD4" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="食物"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3F3FA"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/llySearchFood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/edtFoodname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入食物名称" />
+
+            <ImageView
+                android:id="@+id/imgSearchFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_launcher" />
+        </LinearLayout>
+
+        <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="输入食物名称"
-            android:id="@+id/edtFoodname"/>
-        <ImageView 
-            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="食物分类"
+            android:textSize="20dp" />
+
+        <GridLayout
+            android:id="@+id/gdlFood"
             android:layout_width="wrap_content"
-            android:src="@drawable/ic_launcher"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:id="@+id/imgSearchFood"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:useDefaultMargins="true"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:orientation="vertical"
+                android:padding="20dip" >
+
+                <ImageView
+                    android:id="@+id/imgRice"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/food_zhushi" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:clickable="true"
+                    android:gravity="center_horizontal"
+                    android:text="主食类"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:orientation="vertical"
+                android:padding="20dip" >
+
+                <ImageView
+                    android:id="@+id/imgMeat"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:src="@drawable/food_roudan" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="肉蛋类"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="0"
+                android:orientation="vertical"
+                android:padding="20dip" >
+
+                <ImageView
+                    android:id="@+id/imgFruit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:src="@drawable/food_shuiguo" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="水果类"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:orientation="vertical"
+                android:padding="20dip" >
+
+                <ImageView
+                    android:id="@+id/imgMilk"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:src="@drawable/food_nai" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="奶制品"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:orientation="vertical"
+                android:padding="20dip" >
+
+                <ImageView
+                    android:id="@+id/imgMushroom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:src="@drawable/food_jungu" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="菌菇类"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="1"
+                android:orientation="vertical"
+                android:padding="20dip" >
+
+                <ImageView
+                    android:id="@+id/imgVegetable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:src="@drawable/food_shucai" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="蔬菜类"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="2"
+                android:orientation="vertical"
+                android:padding="20dip" >
+
+                <ImageView
+                    android:id="@+id/imgSnake"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:src="@drawable/food_lingshi" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="零食类"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:orientation="vertical"
+                android:padding="20dip" >
+
+                <ImageView
+                    android:id="@+id/imgBeverage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:src="@drawable/food_yinpin" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="饮品类"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="2"
+                android:orientation="vertical"
+                android:padding="20dip" >
+
+                <ImageView
+                    android:id="@+id/imgOther"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:src="@drawable/food_qita" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="其他类"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </GridLayout>
     </LinearLayout>
-    
-    <TextView 
-        android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:text="食物分类"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"/>
-    <GridLayout 
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_gravity="center"
-       android:background="@android:color/white"
-       android:useDefaultMargins="true"
-       android:columnCount="3"
-       android:rowCount="3"
-       android:visibility="visible"
-       android:id="@+id/gdlFood">  
-       <LinearLayout 
-           android:layout_column="0"
-           android:layout_row="0"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:padding="30dip"
-           android:orientation="vertical">
-           <ImageView 
-               android:layout_width="fill_parent"
-               android:layout_height="match_parent"
-               android:src="@drawable/ic_launcher"
-               android:id="@+id/imgRice"/>
-           <TextView 
-               android:layout_width="fill_parent"
-               android:layout_height="wrap_content"
-               android:text="主食类"
-               android:clickable="true"
-               android:textSize="15sp"/>
-       </LinearLayout>
-        <LinearLayout 
-           android:layout_column="1"
-           android:layout_row="0"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:padding="30dip"
-           android:orientation="vertical">
-           <ImageView 
-               android:layout_width="fill_parent"
-               android:layout_height="match_parent"
-               android:src="@drawable/ic_launcher"
-               android:id="@+id/imgMeat"
-               android:clickable="true"/>
-           <TextView 
-               android:layout_width="fill_parent"
-               android:layout_height="wrap_content"
-               android:text="肉蛋类"
-               android:textSize="15sp"/>
-       </LinearLayout>
-       <LinearLayout 
-          android:layout_column="2"
-          android:layout_row="0"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="30dip"
-          android:orientation="vertical">
-          <ImageView 
-              android:layout_width="fill_parent"
-              android:layout_height="match_parent"
-              android:src="@drawable/ic_launcher"
-              android:id="@+id/imgFruit"
-              android:clickable="true"/>
-          <TextView 
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:text="水果类"
-              android:textSize="15sp"/>
-      </LinearLayout>
-      <LinearLayout 
-          android:layout_column="0"
-          android:layout_row="1"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="30dip"
-          android:orientation="vertical">
-          <ImageView 
-              android:layout_width="fill_parent"
-              android:layout_height="match_parent"
-              android:src="@drawable/ic_launcher"
-              android:id="@+id/imgMilk"
-              android:clickable="true"/>
-          <TextView 
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:text="奶制品"
-              android:textSize="15sp"/>
-          </LinearLayout>
-       <LinearLayout 
-          android:layout_column="1"
-          android:layout_row="1"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="30dip"
-          android:orientation="vertical">
-          <ImageView 
-              android:layout_width="fill_parent"
-              android:layout_height="match_parent"
-              android:src="@drawable/ic_launcher"
-              android:id="@+id/imgMushroom"
-              android:clickable="true"/>
-          <TextView 
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:text="菌菇类"
-              android:textSize="15sp"/>
-          </LinearLayout>
-        <LinearLayout 
-          android:layout_column="2"
-          android:layout_row="1"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="30dip"
-          android:orientation="vertical">
-          <ImageView 
-              android:layout_width="fill_parent"
-              android:layout_height="match_parent"
-              android:src="@drawable/ic_launcher"
-              android:id="@+id/imgVegetable"
-              android:clickable="true"/>
-          <TextView 
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:text="蔬菜类"
-              android:textSize="15sp"/>
-      </LinearLayout>
-      <LinearLayout 
-          android:layout_column="0"
-          android:layout_row="2"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="30dip"
-          android:orientation="vertical">
-          <ImageView 
-              android:layout_width="fill_parent"
-              android:layout_height="match_parent"
-              android:src="@drawable/ic_launcher"
-              android:id="@+id/imgSnake"
-              android:clickable="true"/>
-          <TextView 
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:text="零食类"
-              android:textSize="15sp"/>
-          </LinearLayout>
-       <LinearLayout 
-          android:layout_column="1"
-          android:layout_row="2"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="30dip"
-          android:orientation="vertical">
-          <ImageView 
-              android:layout_width="fill_parent"
-              android:layout_height="match_parent"
-              android:src="@drawable/ic_launcher"
-              android:id="@+id/imgBeverage"
-              android:clickable="true"/>
-          <TextView 
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:text="饮品类"
-              android:textSize="15sp"/>
-          </LinearLayout>
-        <LinearLayout 
-          android:layout_column="2"
-          android:layout_row="2"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:padding="30dip"
-          android:orientation="vertical">
-          <ImageView 
-              android:layout_width="fill_parent"
-              android:layout_height="match_parent"
-              android:src="@drawable/ic_launcher"
-              android:id="@+id/imgOther"
-              android:clickable="true"/>
-          <TextView 
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:text="其他类"
-              android:textSize="15sp"/>
-      </LinearLayout>"
-    </GridLayout>
 
 </LinearLayout>

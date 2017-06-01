@@ -3,202 +3,293 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-       <RelativeLayout
+
+    <RelativeLayout
         android:id="@+id/rloWeather"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#00BCD4">
+        android:background="#00BCD4" >
 
         <TextView
             android:id="@+id/txtFoodTitle"
-            android:text="米饭"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textColor="#ffffff"         
+            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:text="米饭"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
 
         <ImageView
-            android:id="@+id/imgReturnFoodlist"
+            android:id="@+id/imgFoodDetailReturn"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:src="@drawable/all_return" />
-	</RelativeLayout>
-	
-    <RelativeLayout 
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp">
-        <ImageView android:layout_width="70dp"
-            android:layout_height="70dp"
+        android:layout_margin="10dp" >
+
+        <ImageView
             android:id="@+id/imgFooddetail"
-            android:src="@drawable/ic_launcher"/>
-        <TextView android:layout_width="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="米饭"
-            android:id="@+id/txtFooddetailname"
+            android:layout_centerVertical="true"
             android:layout_toRightOf="@id/imgFooddetail"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="5dp"/>
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="116"
-            android:textSize="20sp"
-            android:id="@+id/txtFooddetailhit"
-            android:layout_below="@id/txtFooddetailname"
-            android:layout_toRightOf="@id/imgFooddetail"
-            android:layout_marginLeft="20dp"/>
-        <TextView android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="千卡/100克"
-            android:textSize="20sp"
-            android:layout_toRightOf="@id/txtFooddetailhit"
-            android:layout_below="@id/txtFooddetailname"/>
-        
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtFooddetailname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="米饭"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txtFooddetailhit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="116"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="千卡/100克"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
     </RelativeLayout>
-	<LinearLayout 
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_gravity="center_horizontal"
-	    android:layout_marginTop="20dp"
-	    android:gravity="center">
-	    <Button android:layout_width="100dp" 
-	        android:layout_height="wrap_content"
-	        android:text="添加纪录"
-	        android:id="@+id/btnAddRecord"
-	        android:textSize="12sp"
-	        android:textColor="#ffffff"
-	 		android:background="@drawable/shape"
-	 		android:gravity="center"/>
-	    <Button  android:layout_width="100dp"
-	        android:layout_height="wrap_content"
-	        android:text="加入对比"
-	        android:id="@+id/btnAddCompare"
-	        android:textColor="#ffffff"
-	        android:textSize="12sp"
-	 		android:background="@drawable/shape"
-	 		android:layout_marginLeft="30dp"/>
-	</LinearLayout>
-	<LinearLayout 
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:orientation="vertical"
-	    android:layout_marginTop="20dp"
-	    android:layout_marginLeft="10dp">
-		<TextView android:layout_height="wrap_content"
-		       android:layout_width="wrap_content"
-		       android:text="营养元素/100g"
-		       android:textSize="20sp"/>
-	    <LinearLayout 
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:orientation="horizontal"
-	        android:gravity="center"
-	        android:layout_marginTop="10dp">
-	        <TextView android:layout_height="wrap_content"
-	            android:layout_width="100dp"
-	            android:text="脂肪"
-	            android:textSize="20sp"/>
-	        <TextView android:layout_height="wrap_content"
-	            android:layout_width="wrap_content"
-	            android:text="100"
-	            android:textSize="20sp"
-	            android:id="@+id/txtFooddetailfat"
-	            android:layout_marginLeft="30dp"/>
-	        <TextView android:layout_height="wrap_content"
-	            android:layout_width="wrap_content"
-	            android:text="kj"
-	            android:textSize="20sp"
-	            android:layout_marginLeft="30dp"/>
-	    </LinearLayout>
-	    <LinearLayout 
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:orientation="horizontal"
-	        android:gravity="center"
-	        android:layout_marginTop="10dp">
-	        <TextView android:layout_height="wrap_content"
-	            android:layout_width="100dp"
-	            android:text="蛋白质"
-	            android:textSize="20sp"/>
-	        <TextView android:layout_height="wrap_content"
-	            android:layout_width="wrap_content"
-	            android:text="100"
-	            android:textSize="20sp"
-	            android:id="@+id/txtFooddetailprotein"
-	            android:layout_marginLeft="30dp"/>
-	        <TextView android:layout_height="wrap_content"
-	            android:layout_width="wrap_content"
-	            android:text="g"
-	            android:textSize="20sp"
-	            android:layout_marginLeft="30dp"/>
-	    </LinearLayout>
-	     <LinearLayout 
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:orientation="horizontal"
-	        android:gravity="center"
-	        android:layout_marginTop="10dp">
-	        <TextView android:layout_height="wrap_content"
-	            android:layout_width="100dp"
-	            android:text="碳水化合物"
-	            android:textSize="20sp"/>
-	        <TextView android:layout_height="wrap_content"
-	            android:layout_width="wrap_content"
-	            android:text="100"
-	            android:textSize="20sp"
-	            android:id="@+id/txtFooddetailsugar"
-	            android:layout_marginLeft="30dp"/>
-	        <TextView android:layout_height="wrap_content"
-	            android:layout_width="wrap_content"
-	            android:text="g"
-	            android:textSize="20sp"
-	            android:layout_marginLeft="30dp"/>
-	    </LinearLayout>
-	    <LinearLayout 
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:orientation="horizontal"
-	        android:gravity="center"
-	        android:layout_marginTop="10dp">
-	        <TextView android:layout_height="wrap_content"
-	            android:layout_width="100dp"
-	            android:text="钙"
-	            android:textSize="20sp"/>
-	        <TextView android:layout_height="wrap_content"
-	            android:layout_width="wrap_content"
-	            android:text="100"
-	            android:textSize="20sp"
-	            android:id="@+id/txtFooddetailcalcium"
-	            android:layout_marginLeft="30dp"/>
-	        <TextView android:layout_height="wrap_content"
-	            android:layout_width="wrap_content"
-	            android:text="g"
-	            android:textSize="20sp"
-	            android:layout_marginLeft="30dp"/>
-	    </LinearLayout>
-	</LinearLayout>
-    <LinearLayout android:layout_width="match_parent"
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:orientation="vertical">
-        <TextView android:layout_height="wrap_content"
-		       android:layout_width="wrap_content"
-		       android:text="找食小助手"
-		       android:textSize="20sp"/>
-        <TextView android:layout_height="wrap_content"
-		       android:layout_width="wrap_content"
-		       android:text="hhhhh"
-		       android:textSize="20sp"
-		       android:layout_gravity="center"
-		       android:id="@+id/txtFoodedetailtips"/>
-        
+        android:layout_margin="10dp" >
+
+        <Button
+            android:id="@+id/btnAddCompare"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/food_button_style"
+            android:text="      + 加入对比      "
+            android:textColor="#FF5252"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnAddRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/food_button_style"
+            android:gravity="center"
+            android:text="      + 添加纪录      "
+            android:textColor="#FF5252"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="营养元素"
+                android:textColor="#8a8a8a" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="每100g"
+                android:textColor="#8a8a8a" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="单位"
+                android:textColor="#8a8a8a" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="脂肪"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtFooddetailfat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="100"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="千卡"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="3"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="蛋白质"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtFooddetailprotein"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="100"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="克"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="3"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="碳水化合物"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtFooddetailsugar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="100"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="克"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="3"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="钙"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtFooddetailcalcium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="100"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="克"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="找食小助手"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtFoodedetailtips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="hhhhh"
+            android:textSize="15sp" />
     </LinearLayout>
 
 </LinearLayout>

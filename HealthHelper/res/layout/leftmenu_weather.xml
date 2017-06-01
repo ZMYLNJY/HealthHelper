@@ -2,22 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:background="#F3F3FA" >
+    android:background="#F3F3FA"
+    android:orientation="horizontal" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" >
-        
+
         <RelativeLayout
-	        android:id="@+id/rloWeather"
-	        android:layout_width="match_parent"
-	        android:layout_height="50dp"
-	        android:paddingLeft="5dp"
-	        android:paddingRight="5dp"
-	        android:layout_alignParentLeft="true"
-	        android:layout_alignParentTop="true">
+            android:id="@+id/rloWeather"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
 
             <ImageView
                 android:id="@+id/imgLeftmenuAdd"
@@ -30,17 +30,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
-                android:textSize="18dp"
-                android:text="收藏城市" />
-	
-	    </RelativeLayout>
-	    
+                android:layout_centerVertical="true"
+                android:text="收藏城市"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
         <View
-          android:layout_width="match_parent"
-          android:layout_height="1dp"
-          android:background="#000000" />
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
 
         <ListView
             android:id="@+id/lvLocationShow"
@@ -48,8 +47,6 @@
             android:layout_height="wrap_content"
             android:textColor="#000000" >
         </ListView>
-        
     </LinearLayout>
-
 
 </LinearLayout>
