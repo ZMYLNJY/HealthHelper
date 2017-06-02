@@ -12,12 +12,16 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MyRecordActivity extends Activity {
 
 	private TextView txtDate;
 	private String dateString;
+	
+	private ImageView imgReturn;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -25,6 +29,15 @@ public class MyRecordActivity extends Activity {
 		setContentView(R.layout.activity_my_record);
 		
 		txtDate = (TextView)findViewById(R.id.txtRecordDate);
+		imgReturn = (ImageView)findViewById(R.id.imgRecordReturn);
+		
+		imgReturn.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				finish();
+			}
+		});
 		
 		dateString = txtDate.getText().toString();
 		

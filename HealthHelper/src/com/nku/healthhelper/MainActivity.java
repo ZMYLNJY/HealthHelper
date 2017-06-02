@@ -33,7 +33,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -59,11 +58,9 @@ public class MainActivity extends TabActivity{
 	private TextView txtWeatherCityTemp,txtWeatherWeather,txtWeatherMoisture,txtWeatherWindPower,txtWeatherAqi;
 	private TextView txtWeatherDay1Date,txtWeatherDay1Day,txtWeatherDay1Night
 	                 ,txtWeatherDay2Date,txtWeatherDay2Day,txtWeatherDay2Night;
-	private Button btnWeatherTest;
 	//leftmenu:show all locations 
 	private ListView lvLocationShow;
 	private LocationAdapter locationAdapter;
-	//private List<String> cityNamesList=new ArrayList<String>();
 	private List<WeatherInfo> weatherInfos=new ArrayList<WeatherInfo>();
 	//leftmenu:点击事件
 	private ImageView imgLeftmenuAdd;
@@ -128,7 +125,7 @@ public class MainActivity extends TabActivity{
         requestWindowFeature(Window.FEATURE_NO_TITLE); 
         setContentView(R.layout.activity_main);
         
-        txtWeatherCityName=(TextView) findViewById(R.id.txtWeatherCityName);
+        txtWeatherCityName=(TextView) findViewById(R.id.txtWeatherCityName1);
         txtWeatherCityTemp=(TextView) findViewById(R.id.txtWeatherCityTemp);
         txtWeatherWeather=(TextView) findViewById(R.id.txtWeatherWeather);
         txtWeatherMoisture=(TextView) findViewById(R.id.txtWeatherMoisture);
@@ -253,19 +250,19 @@ public class MainActivity extends TabActivity{
 			}
 		});
         
-        imgWeatherHelper=(ImageView) findViewById(R.id.imgWeatherHelper);
-        imgWeatherHelper.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View view) {
-				Intent  intent=new Intent(MainActivity.this,ClothesActivity.class);
-				
-				intent.putExtra("dayWeathers", futureDays);
-				
-				startActivity(intent);
-				
-			}
-		});
+//        imgWeatherHelper=(ImageView) findViewById(R.id.imgWeatherHelper);
+//        imgWeatherHelper.setOnClickListener(new OnClickListener() {
+//			
+//			@Override
+//			public void onClick(View view) {
+//				Intent  intent=new Intent(MainActivity.this,ClothesActivity.class);
+//				
+//				intent.putExtra("dayWeathers", futureDays);
+//				
+//				startActivity(intent);
+//				
+//			}
+//		});
 		
         mTabHost = getTabHost();
         final TabWidget tabWidget = mTabHost.getTabWidget();
@@ -369,13 +366,6 @@ public class MainActivity extends TabActivity{
 			    
 			}
 		}).start();
-    }
-    
-    private void initialCityData(){
-    	SharedPreferences settings = getSharedPreferences("CityNames", Activity.MODE_PRIVATE);  
-    	SharedPreferences.Editor editor = settings.edit();  
-    	editor.putString("cityName", "北京");  
-    	editor.commit();  	
     }
     
     //获取保存的城市名称

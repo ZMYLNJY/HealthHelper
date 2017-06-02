@@ -24,7 +24,7 @@ public class RecordView extends LinearLayout {
 		txtWeight = (TextView)findViewById(R.id.txtRecordWeight);
 		txtCaro = (TextView)findViewById(R.id.txtRecordCaro);
 		
-		txtName.setText(record.getFood().getFoodName());
+		txtName.setText(record.getFoodName()+"");
 		txtWeight.setText(record.getWeight() + "g");
 		txtCaro.setText(record.getCalories() + "千卡");
 		

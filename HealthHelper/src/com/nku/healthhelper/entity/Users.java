@@ -89,9 +89,9 @@ public class Users extends AVUser {
 //		return this.listCity;
 		return getList("city");
 	}
-	public int getCityCount(){
-		return getCity().size();
-	}
+//	public int getCityCount(){
+//		return getCity().size();
+//	}
 	public void addCity(String city){
 		addUnique("city", city);
 	}
@@ -112,9 +112,9 @@ public class Users extends AVUser {
 	public List<Photo> getThumbPhoto(){
 		return getList("thumbPhoto");
 	}
-	public int getThumbPhotoCount(){
-		return getThumbPhoto().size();
-	}
+//	public int getThumbPhotoCount(){
+//		return getThumbPhoto().size();
+//	}
 	public void addThumbPhoto(Photo photo){
 		addUnique("thumbPhoto", photo);
 	}
@@ -133,9 +133,9 @@ public class Users extends AVUser {
 	public List<Photo> getFavoPhoto(){
 		return getList("favoPhoto");
 	}
-	public int getFavoPhotoCount(){
-		return getFavoPhoto().size();
-	}
+//	public int getFavoPhotoCount(){
+//		return getFavoPhoto().size();
+//	}
 	public void addFavoPhoto(Photo photo){
 		addUnique("favoPhoto", photo);
 	}

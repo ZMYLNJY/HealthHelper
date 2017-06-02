@@ -32,6 +32,7 @@ public class DietRecordTask {
 		DietRecord dietRecord = new DietRecord();
 		dietRecord.setDate(date);
 		dietRecord.setFood(food);
+		dietRecord.setFoodName(food.getFoodName());
 		dietRecord.setKind(kind);
 		dietRecord.setUser(users);
 		dietRecord.setCalories(weight * food.getCalorie() / 100);
@@ -45,9 +46,9 @@ public class DietRecordTask {
 	 * @param date 上传日期
 	 */
 	public void getRecordList(AVUser users, String date){
-		final AVQuery<DietRecord> userQuery = new AVQuery<DietRecord>("DietRecord");
+		final AVQuery<DietRecord> userQuery = new AVQuery<DietRecord>("Dietrecord");
 		userQuery.whereEqualTo("user", users);
-		final AVQuery<DietRecord> dateQuery = new AVQuery<DietRecord>("DietRecord");
+		final AVQuery<DietRecord> dateQuery = new AVQuery<DietRecord>("Dietrecord");
 		dateQuery.whereEqualTo("date", date);
 		
 		@SuppressWarnings("unchecked")

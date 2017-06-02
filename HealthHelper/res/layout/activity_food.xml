@@ -30,7 +30,7 @@
 
         <LinearLayout
             android:id="@+id/llySearchFood"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
@@ -42,15 +42,18 @@
                 android:id="@+id/edtFoodname"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:hint="输入食物名称" />
+                android:layout_weight="5"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_textview" />
 
             <ImageView
                 android:id="@+id/imgSearchFood"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:src="@drawable/ic_launcher" />
+                android:src="@drawable/all_search1" />
+            
         </LinearLayout>
 
         <TextView

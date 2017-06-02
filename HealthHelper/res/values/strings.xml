@@ -14,6 +14,8 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_my_record">MyRecordActivity</string>
+    <string name="title_activity_record_detail">RecordDetailActivity</string>
     <string name="title_activity_update_user_info">UpdateUserInfoActivity</string>
+    <string name="default_text">xxx</string>
 
 </resources>

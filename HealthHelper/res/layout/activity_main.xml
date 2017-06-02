@@ -32,7 +32,7 @@
                     android:background="#00BCD4" >
 
                     <TextView
-                        android:id="@+id/txtWeatherCityName"
+                        android:id="@+id/txtWeatherCityName1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -154,6 +154,7 @@
                             </LinearLayout>
 
                             <RelativeLayout
+                                android:id="@+id/test"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal" >
@@ -270,12 +271,11 @@
                     <ImageView
                         android:id="@+id/imgWeatherHelper"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/btnWeatherTest"
+                        android:layout_height="250dp"
+                        android:layout_alignParentTop="true"
                         android:layout_marginLeft="26dp"
-                        android:layout_marginTop="72dp"
                         android:layout_toRightOf="@+id/txtWeatherWeather"
-                        android:src="@drawable/ic_launcher" />
+                        android:src="@drawable/weather_people" />
 
                     <TextView
                         android:id="@+id/txtWeatherCityTemp"

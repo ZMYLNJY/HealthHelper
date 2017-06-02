@@ -40,6 +40,14 @@ public class DietRecord extends AVObject {
 		return getString("kind");
 	}
 	
+//	about foodName
+	public void setFoodName(String foodName){
+		put("foodName", foodName);
+	}
+	public String getFoodName(){
+		return getString("foodName");
+	}
+	
 //	about weight
 	public void setWeight(String weight){
 		put("weight", weight);

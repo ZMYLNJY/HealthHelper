@@ -8,28 +8,30 @@
 	<LinearLayout 
 	    android:layout_width="0dp"
 	    android:layout_height="match_parent"
-	    android:layout_weight="2"
+	    android:layout_weight="4"
 	    android:orientation="vertical"
-	    android:gravity="left">
+	    android:gravity="center_vertical">
 	    
 	    <TextView 
 	        android:id="@+id/txtRecordName"
 	        android:layout_width="wrap_content"
 	        android:layout_height="0dp"
-	        android:layout_weight="1.5"
+	        android:layout_weight="3"
 	        android:text="米饭"
 	        android:textColor="@android:color/black"
 	        style="@android:style/TextAppearance.Medium.Inverse"
-	        android:gravity="center_vertical"/>
+	        android:gravity="center_vertical"
+	        android:paddingLeft="20dp"/>
 	    <TextView 
 	        android:id="@+id/txtRecordWeight"
 	        android:layout_width="wrap_content"
 	        android:layout_height="0dp"
-	        android:layout_weight="1"
+	        android:layout_weight="2"
 	        android:text="100g"
 	        android:textColor="@android:color/darker_gray"
 	        style="@android:style/TextAppearance.Small.Inverse"
-	        android:gravity="center_vertical"/>
+	        android:gravity="center_vertical"
+	        android:paddingLeft="20dp"/>
 	    
 	</LinearLayout>
 	
@@ -37,7 +39,7 @@
 	    android:id="@+id/txtRecordCaro"
 	    android:layout_width="0dp"
 	    android:layout_height="match_parent"
-	    android:layout_weight="1"
+	    android:layout_weight="2"
 	    android:gravity="center_vertical"
 	    android:text="100千卡"
 	    android:textColor="@android:color/black"
@@ -46,8 +48,9 @@
 	<ImageView
             android:id="@+id/imgGoDetail"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/my_arrow" />
+            android:src="@drawable/my_arrow" 
+            android:layout_gravity="center_vertical"/>
     
 </LinearLayout>

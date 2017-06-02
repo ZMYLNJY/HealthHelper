@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -31,6 +32,7 @@ public class UserActivity extends Activity implements OnClickListener{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+//		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_user);
 
 		imgMyPhoto = (CircleImageView)findViewById(R.id.imgMyPhoto);
@@ -52,9 +54,26 @@ public class UserActivity extends Activity implements OnClickListener{
 			
 			txtMyRealName.setText(user.getUsername());
 			txtMyId.setText(user.getUsername());
-			txtMyGender.setText(user.getString("gender"));
-			txtMyHigh.setText(user.getString("height") + "cm");
-			txtMyWeight.setText(user.getString("weight") + "kg");
+			if("".equals(user.getString("gender"))||user.getString("gender")==null){
+				txtMyGender.setText("xxx");
+			}
+			else{
+				txtMyGender.setText(user.getString("gender"));
+			}
+			
+			if("".equals(user.getString("height"))||user.getString("height")==null){
+				txtMyHigh.setText("xxx");
+			}
+			else{
+				txtMyHigh.setText(user.getString("height")+ "cm");
+			}
+			
+			if("".equals(user.getString("weight"))||user.getString("weight")==null){
+				txtMyWeight.setText("xxx");
+			}
+			else{
+				txtMyWeight.setText(user.getString("weight")+ "kg");
+			}
 			
 			btnGoLog.setText("点击登出");
 			btnGoLog.setOnClickListener(this);
